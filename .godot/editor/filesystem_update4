@@ -1,7 +1,7 @@
-res://Player/scene/player.tscn
-res://Monster/scene/monster.tscn
 res://main.tscn
+res://Player/scene/laser.tscn
 res://Core/Base/Persona/Persona.cs
 res://main.cs
 res://Monster/domain/monster.cs
+res://Player/domain/laser/Laser.cs
 res://Player/domain/Player.cs

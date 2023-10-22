@@ -4,15 +4,19 @@ using Test.Core.Base.status;
 
 namespace Test.Player.domain.status;
 
-public class PlayerAttackState:PlayerState
+public class PlayerAttackState : PlayerState
 {
-    public PlayerAttackState(Player persona, PersonaStateMachine<Player> personaStateMachine) : base(persona, personaStateMachine)
+    public PlayerAttackState(Player persona, PersonaStateMachine<Player> personaStateMachine) : base(persona,
+        personaStateMachine)
     {
     }
-    
+
     public override void EnterState()
     {
-     GD.Print("开始攻击");
+        GD.Print("开始攻击");
+        var Laser = GD.Load<PackedScene>("res://Player/scene/laser.tscn");
+        var laser = Laser.Instantiate();
+        persona.AddChild(laser);
     }
 
     public override void ExitState()

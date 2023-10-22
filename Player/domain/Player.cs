@@ -28,7 +28,7 @@ public partial class Player : Persona
     {
         base._Ready();
         Position = new(50, GetViewportRect().Size.Y / 2);
-        Rotation = 1.5f;
+        Rotation = 1.6f;
         speed = 500;
         Awake();
         StateMachine.Init(IdleState);

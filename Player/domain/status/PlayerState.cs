@@ -19,9 +19,13 @@ public abstract class PlayerState : PersonaState<Player>
         {
             persona.Move(targetVector * (float)(persona.speed * delta));
             personaStateMachine.ChangeState(persona.RunState);
-            return;
         }
-        
+
+        if (Input.IsActionJustPressed("gongji"))
+        {
+            personaStateMachine.ChangeState(persona.AttackState);
+        }
+
         personaStateMachine.ChangeState(persona.IdleState);
     }
 }
