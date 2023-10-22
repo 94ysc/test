@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="GodotSharp">
+        <HintPath>..\..\..\..\dev\Godot_v4.1.2-stable_mono_win64\GodotSharp\Api\Debug\GodotSharp.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>

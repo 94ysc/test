@@ -1,0 +1,17 @@
+D:\work\game\test\.godot\mono\temp\bin\Debug\Test.deps.json
+D:\work\game\test\.godot\mono\temp\bin\Debug\Test.runtimeconfig.json
+D:\work\game\test\.godot\mono\temp\bin\Debug\Test.dll
+D:\work\game\test\.godot\mono\temp\bin\Debug\Test.pdb
+D:\work\game\test\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\work\game\test\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\work\game\test\.godot\mono\temp\obj\Debug\Test.csproj.AssemblyReference.cache
+D:\work\game\test\.godot\mono\temp\obj\Debug\Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\game\test\.godot\mono\temp\obj\Debug\Test.AssemblyInfoInputs.cache
+D:\work\game\test\.godot\mono\temp\obj\Debug\Test.AssemblyInfo.cs
+D:\work\game\test\.godot\mono\temp\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\work\game\test\.godot\mono\temp\obj\Debug\Test.csproj.CopyComplete
+D:\work\game\test\.godot\mono\temp\obj\Debug\Test.dll
+D:\work\game\test\.godot\mono\temp\obj\Debug\refint\Test.dll
+D:\work\game\test\.godot\mono\temp\obj\Debug\Test.pdb
+D:\work\game\test\.godot\mono\temp\obj\Debug\Test.genruntimeconfig.cache
+D:\work\game\test\.godot\mono\temp\obj\Debug\ref\Test.dll
