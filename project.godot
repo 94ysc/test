@@ -47,6 +47,13 @@ gongji={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="word"
+2d_render/layer_2="player"
+2d_render/layer_3="monster"
+2d_render/layer_4="laser"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

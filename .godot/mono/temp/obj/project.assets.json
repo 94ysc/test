@@ -88,19 +88,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ysc\\.nuget\\packages\\": {}
+    "C:\\Users\\yunshi-songjie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\game\\test\\Test.csproj",
+      "projectUniqueName": "C:\\Development\\game\\test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "D:\\work\\game\\test\\Test.csproj",
-      "packagesPath": "C:\\Users\\ysc\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\game\\test\\.godot\\mono\\temp\\obj\\",
+      "projectPath": "C:\\Development\\game\\test\\Test.csproj",
+      "packagesPath": "C:\\Users\\yunshi-songjie\\.nuget\\packages\\",
+      "outputPath": "C:\\Development\\game\\test\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ysc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\yunshi-songjie\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -148,12 +148,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

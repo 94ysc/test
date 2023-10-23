@@ -34,6 +34,11 @@ public partial class Player : Persona
         StateMachine.Init(IdleState);
     }
 
+    public override void Die()
+    {
+        throw new NotImplementedException();
+    }
+
     public override void _Process(double delta)
     {
         StateMachine.CurrentPersonaState.FrameUpdate(delta);
