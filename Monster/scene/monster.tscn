@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3wn1j40ehivm"]
+[gd_scene load_steps=8 format=3 uid="uid://b3wn1j40ehivm"]
 
+[ext_resource type="Script" path="res://Monster/domain/Monster.cs" id="1_emytj"]
 [ext_resource type="Texture2D" uid="uid://b50r7pjtmf3nn" path="res://Monster/asssets/zombie.png" id="1_w10yo"]
-[ext_resource type="Script" path="res://Monster/domain/monster.cs" id="1_we6ew"]
+[ext_resource type="Texture2D" uid="uid://ddhqska4pthuu" path="res://image/health.png" id="3_t5smj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e2ptf"]
 radius = 35.0
@@ -94,8 +95,7 @@ _data = {
 }
 
 [node name="monster" type="CharacterBody2D"]
-script = ExtResource("1_we6ew")
-metadata/_edit_group_ = true
+script = ExtResource("1_emytj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_w10yo")
@@ -112,8 +112,24 @@ libraries = {
 "": SubResource("AnimationLibrary_2wxqh")
 }
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="monsterArea" type="Area2D" parent="."]
+light_mask = 4
+visibility_layer = 10
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="monsterArea"]
 position = Vector2(29, 6)
 shape = SubResource("CapsuleShape2D_e2ptf")
+
+[node name="HealthTitle" type="TextureProgressBar" parent="."]
+offset_left = -29.0
+offset_top = -98.0
+offset_right = 91.0
+offset_bottom = -58.0
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource("3_t5smj")
+texture_progress = ExtResource("3_t5smj")
+tint_under = Color(0.607843, 0.690196, 0.933333, 0.431373)
+tint_progress = Color(0.105882, 0.972549, 0.635294, 1)
+
+[connection signal="area_entered" from="monsterArea" to="." method="attacked"]

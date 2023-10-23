@@ -13,12 +13,12 @@ public class PlayerRunState : PlayerState
 
     public override void EnterState()
     {
-        GD.Print("开始运动");
+        // GD.Print("开始运动");
     }
 
     public override void ExitState()
     {
-        GD.Print("结束运动");
+        // GD.Print("结束运动");
     }
 
  

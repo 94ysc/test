@@ -13,7 +13,7 @@ public class PlayerAttackState : PlayerState
 
     public override void EnterState()
     {
-        GD.Print("开始攻击");
+        // GD.Print("开始攻击");
         var Laser = GD.Load<PackedScene>("res://Player/scene/laser.tscn");
         var laser = Laser.Instantiate();
         persona.AddChild(laser);
@@ -21,7 +21,7 @@ public class PlayerAttackState : PlayerState
 
     public override void ExitState()
     {
-        GD.Print("结束攻击");
+        // GD.Print("结束攻击");
     }
 
     public override void FrameUpdate(double delta)

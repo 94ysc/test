@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "uD2Zh29m0i12MEAJw7swO2oAy1XRpVwraOm/WAxfMlquihEdZ6F1vtILeFtX5pzoOaxnqx3mFaKWBTQtmj3L5A==",
+  "dgSpecHash": "YOz/saXjEzVEQWN1Hn+OMyOOcqgRpTVFEe549lVm7KhiKNIXKWiSFGQDZ0OqJWAzCje8CgZdaUQoI9es0hTqpQ==",
   "success": true,
-  "projectFilePath": "D:\\work\\game\\test\\Test.csproj",
+  "projectFilePath": "C:\\Development\\game\\test\\Test.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ysc\\.nuget\\packages\\godot.sourcegenerators\\4.1.2\\godot.sourcegenerators.4.1.2.nupkg.sha512",
-    "C:\\Users\\ysc\\.nuget\\packages\\godotsharp\\4.1.2\\godotsharp.4.1.2.nupkg.sha512",
-    "C:\\Users\\ysc\\.nuget\\packages\\godotsharpeditor\\4.1.2\\godotsharpeditor.4.1.2.nupkg.sha512"
+    "C:\\Users\\yunshi-songjie\\.nuget\\packages\\godot.sourcegenerators\\4.1.2\\godot.sourcegenerators.4.1.2.nupkg.sha512",
+    "C:\\Users\\yunshi-songjie\\.nuget\\packages\\godotsharp\\4.1.2\\godotsharp.4.1.2.nupkg.sha512",
+    "C:\\Users\\yunshi-songjie\\.nuget\\packages\\godotsharpeditor\\4.1.2\\godotsharpeditor.4.1.2.nupkg.sha512",
+    "C:\\Users\\yunshi-songjie\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.20\\microsoft.netcore.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\yunshi-songjie\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.20\\microsoft.windowsdesktop.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\yunshi-songjie\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.20\\microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512"
   ],
   "logs": []
 }

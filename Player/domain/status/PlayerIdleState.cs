@@ -13,12 +13,12 @@ public class PlayerIdleState : PlayerState
 
     public override void EnterState()
     {
-       GD.Print("进入静止");
+       // GD.Print("进入静止");
     }
 
     public override void ExitState()
     {
-        GD.Print("结束静止");
+        // GD.Print("结束静止");
     }
 
   
