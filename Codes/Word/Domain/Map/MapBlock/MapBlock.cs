@@ -21,7 +21,7 @@ public class MapBlock
         _tileSetSource = tileSetSource;
     }
 
-    public Vector2I createRandomAtlas()
+    public virtual Vector2I createRandomAtlas()
     {
         return new Vector2I(new Random().Next(0, _tileSetSource.GetTilesCount()), 0);
     }

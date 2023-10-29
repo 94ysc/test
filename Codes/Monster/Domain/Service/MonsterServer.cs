@@ -8,7 +8,7 @@ namespace ShengChao.Codes.Monster.Domain;
 
 public class MonsterServer
 {
-    private MonsterFactory _monsterFactory = new MonsterFactory();
+    private MonsterFactory _monsterFactory = new();
 
     public BaseMonster RandomMonster()
     {

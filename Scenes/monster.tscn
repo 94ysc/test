@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3wn1j40ehivm"]
+[gd_scene load_steps=6 format=3 uid="uid://b3wn1j40ehivm"]
 
 [ext_resource type="Script" path="res://Codes/Monster/Domain/BaseMonster.cs" id="1_qqsa5"]
 [ext_resource type="Texture2D" uid="uid://dddii6pb3svh0" path="res://Assets/Creature/play.png" id="2_owv3v"]
@@ -8,7 +8,10 @@
 resource_local_to_scene = true
 line_spacing = 0.0
 font = ExtResource("3_sw66g")
-font_size = 25
+font_size = 43
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fnc0e"]
+radius = 112.071
 
 [node name="monster" type="CharacterBody2D"]
 light_mask = 2
@@ -19,22 +22,29 @@ collision_mask = 7
 collision_priority = 100.0
 motion_mode = 1
 script = ExtResource("1_qqsa5")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.337255, 0.0196078, 1)
-position = Vector2(-42.875, -48.25)
-scale = Vector2(0.276639, 0.271127)
+position = Vector2(-45, -46)
+scale = Vector2(0.440574, 0.419014)
 texture = ExtResource("2_owv3v")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-42.7303, -47.8963)
-scale = Vector2(0.303745, 0.291325)
+position = Vector2(-44.3322, -46.0671)
+scale = Vector2(0.438189, 0.416819)
 polygon = PackedVector2Array(-62, -38, -0.713672, -68.3641, 59.9482, -36.0527, 63.5165, 31.9713, 1.0705, 71.085, -62, 35)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -57.0
-offset_top = -61.0
-offset_right = -32.0
-offset_bottom = -35.0
+offset_left = -66.0
+offset_top = -72.0
+offset_right = -24.0
+offset_bottom = -25.0
 text = "火"
 label_settings = SubResource("LabelSettings_qp70w")
+
+[node name="HatredCheck" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HatredCheck"]
+position = Vector2(-45, -46)
+shape = SubResource("CircleShape2D_fnc0e")

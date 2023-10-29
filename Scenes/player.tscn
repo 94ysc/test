@@ -45,3 +45,11 @@ light_mask = 2
 visibility_layer = 2
 build_mode = 1
 polygon = PackedVector2Array(1, -71, 61, -35, 61, 35, -1, 72, -61, 36, -61, -36)
+
+[node name="Beaten" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Beaten"]
+light_mask = 2
+visibility_layer = 2
+build_mode = 1
+polygon = PackedVector2Array(1, -71, 61, -35, 61, 35, -1, 72, -61, 36, -61, -36)

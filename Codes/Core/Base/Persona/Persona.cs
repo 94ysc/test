@@ -2,14 +2,14 @@ using Godot;
 
 namespace ShengChao.Codes.persona;
 
-public abstract partial class Persona :CharacterBody2D, IDamageable, IMoveable
+public abstract partial class Persona : CharacterBody2D, IDamageable, IMoveable
 {
     [Export] public float MaxHealth { get; set; } = 100f;
     public float CurrentHealth { get; set; }
 
     public bool IsFacingRight { get; set; }
 
-    public float Speed;
+    public float Speed { get; set; } = 100;
 
     #region 初始化人物
 
@@ -37,9 +37,9 @@ public abstract partial class Persona :CharacterBody2D, IDamageable, IMoveable
 
     #region 移动方法
 
-    public virtual void Move(Vector2 velocity,double delta)
+    public virtual void Move(Vector2 velocity, double delta)
     {
-        Velocity = velocity.Normalized()*Speed*(float)delta;
+        Velocity = velocity.Normalized() * Speed * (float)delta;
         CheckForLeftOrRightFacing(velocity);
         Position += Velocity;
         CheckBoundary(Position);
@@ -67,6 +67,4 @@ public abstract partial class Persona :CharacterBody2D, IDamageable, IMoveable
     }
 
     #endregion
-
-
 }
