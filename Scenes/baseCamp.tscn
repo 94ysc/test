@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://xifuokgbarpf"]
+
+[ext_resource type="Texture2D" uid="uid://dddii6pb3svh0" path="res://Assets/Creature/play.png" id="1_dsd0l"]
+[ext_resource type="FontFile" uid="uid://cffxqn80dw31y" path="res://Assets/TTF/chongxi_seal.otf" id="2_hf4i4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1gqrp"]
+font = ExtResource("2_hf4i4")
+font_size = 53
+
+[node name="baseCamp" type="StaticBody2D"]
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.372549, 1, 1, 1)
+position = Vector2(-2, 3.8147e-06)
+scale = Vector2(1.69672, 1.6338)
+texture = ExtResource("1_dsd0l")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -28.0
+offset_top = -55.0
+offset_right = 25.0
+offset_bottom = 59.0
+text = "本
+部"
+label_settings = SubResource("LabelSettings_1gqrp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-3, 116, 102, 60, 100, -60, 1, -114, -110, -57, -104, 60)

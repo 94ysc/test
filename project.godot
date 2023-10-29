@@ -10,14 +10,22 @@ config_version=5
 
 [application]
 
-config/name="Test"
-run/main_scene="res://main.tscn"
+config/name="某科学的进化论"
+run/main_scene="res://scenes/word.tscn"
 config/features=PackedStringArray("4.1", "C#", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1704
+window/size/viewport_height=786
+window/size/window_width_override=852
+window/size/window_height_override=392
+window/stretch/mode="viewport"
+
 [dotnet]
 
-project/assembly_name="Test"
+project/assembly_name="某科学的进化论"
 
 [input]
 
@@ -41,20 +49,14 @@ RIGHT={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
-gongji={
-"deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
-]
-}
 
 [layer_names]
 
-2d_render/layer_1="word"
-2d_render/layer_2="player"
-2d_render/layer_3="monster"
-2d_render/layer_4="laser"
+2d_physics/layer_1="word"
+2d_physics/layer_2="player"
+2d_physics/layer_3="monster"
+2d_physics/layer_4="fall"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh64oi87gd5fq"]
+
+[ext_resource type="Script" path="res://Codes/Word/Domain/Word.cs" id="1_8liqr"]
+
+[node name="word" type="Node2D"]
+script = ExtResource("1_8liqr")
+metadata/_edit_horizontal_guides_ = [6391.0, 784.0]
+metadata/_edit_vertical_guides_ = [18616.0, -707.0]

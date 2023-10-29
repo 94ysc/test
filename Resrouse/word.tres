@@ -1,0 +1,125 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://mwif3614ftcy"]
+
+[ext_resource type="Texture2D" uid="uid://d2tj1x8x5s0hv" path="res://Assets/Map/shan.png" id="1_pcu1q"]
+[ext_resource type="Texture2D" uid="uid://yva4phjgcmgr" path="res://Assets/Map/水.png" id="2_d286j"]
+[ext_resource type="Texture2D" uid="uid://by3622yxibxpp" path="res://Assets/Map/草地.png" id="6_giqap"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yowjn"]
+resource_name = "mountain"
+texture = ExtResource("1_pcu1q")
+texture_region_size = Vector2i(122, 142)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -71, 61, -35.5, 61, 35.5, 0, 71, -61, 35.5, -61, -35.5)
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_corner = 0
+0:0/0/terrains_peering_bit/bottom_left_side = 0
+0:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_left_side = 0
+0:0/0/terrains_peering_bit/top_left_corner = 0
+0:0/0/terrains_peering_bit/top_corner = 0
+0:0/0/terrains_peering_bit/top_right_side = 0
+0:0/0/terrains_peering_bit/top_right_corner = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mtvr3"]
+resource_name = "water"
+texture = ExtResource("2_d286j")
+texture_region_size = Vector2i(122, 142)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 1
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -71, 61, -35.5, 61, 35.5, 0, 71, -61, 35.5, -61, -35.5)
+0:0/0/terrains_peering_bit/right_side = 1
+0:0/0/terrains_peering_bit/bottom_right_side = 1
+0:0/0/terrains_peering_bit/bottom_right_corner = 1
+0:0/0/terrains_peering_bit/bottom_corner = 1
+0:0/0/terrains_peering_bit/bottom_left_side = 1
+0:0/0/terrains_peering_bit/bottom_left_corner = 1
+0:0/0/terrains_peering_bit/left_side = 1
+0:0/0/terrains_peering_bit/top_left_side = 1
+0:0/0/terrains_peering_bit/top_left_corner = 1
+0:0/0/terrains_peering_bit/top_corner = 1
+0:0/0/terrains_peering_bit/top_right_side = 1
+0:0/0/terrains_peering_bit/top_right_corner = 1
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mvrpy"]
+resource_name = "grass"
+texture = ExtResource("6_giqap")
+texture_region_size = Vector2i(122, 142)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 2
+0:0/0/probability = 0.1
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/right_side = 2
+0:0/0/terrains_peering_bit/bottom_right_side = 2
+0:0/0/terrains_peering_bit/bottom_right_corner = 2
+0:0/0/terrains_peering_bit/bottom_corner = 2
+0:0/0/terrains_peering_bit/bottom_left_side = 2
+0:0/0/terrains_peering_bit/bottom_left_corner = 2
+0:0/0/terrains_peering_bit/left_side = 2
+0:0/0/terrains_peering_bit/top_left_side = 2
+0:0/0/terrains_peering_bit/top_left_corner = 2
+0:0/0/terrains_peering_bit/top_corner = 2
+0:0/0/terrains_peering_bit/top_right_side = 2
+0:0/0/terrains_peering_bit/top_right_corner = 2
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 2
+1:0/0/probability = 0.1
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/terrains_peering_bit/right_side = 2
+1:0/0/terrains_peering_bit/bottom_right_side = 2
+1:0/0/terrains_peering_bit/bottom_right_corner = 2
+1:0/0/terrains_peering_bit/bottom_corner = 2
+1:0/0/terrains_peering_bit/bottom_left_side = 2
+1:0/0/terrains_peering_bit/bottom_left_corner = 2
+1:0/0/terrains_peering_bit/left_side = 2
+1:0/0/terrains_peering_bit/top_left_side = 2
+1:0/0/terrains_peering_bit/top_left_corner = 2
+1:0/0/terrains_peering_bit/top_corner = 2
+1:0/0/terrains_peering_bit/top_right_side = 2
+1:0/0/terrains_peering_bit/top_right_corner = 2
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 2
+2:0/0/probability = 2.0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/terrains_peering_bit/right_side = 2
+2:0/0/terrains_peering_bit/bottom_right_side = 2
+2:0/0/terrains_peering_bit/bottom_right_corner = 2
+2:0/0/terrains_peering_bit/bottom_corner = 2
+2:0/0/terrains_peering_bit/bottom_left_side = 2
+2:0/0/terrains_peering_bit/bottom_left_corner = 2
+2:0/0/terrains_peering_bit/left_side = 2
+2:0/0/terrains_peering_bit/top_left_side = 2
+2:0/0/terrains_peering_bit/top_left_corner = 2
+2:0/0/terrains_peering_bit/top_corner = 2
+2:0/0/terrains_peering_bit/top_right_side = 2
+2:0/0/terrains_peering_bit/top_right_corner = 2
+
+[resource]
+tile_shape = 3
+tile_size = Vector2i(122, 142)
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "shan"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+terrain_set_0/terrain_1/name = "water"
+terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
+terrain_set_0/terrain_2/name = "flood"
+terrain_set_0/terrain_2/color = Color(0.46875, 0.5, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_yowjn")
+sources/1 = SubResource("TileSetAtlasSource_mtvr3")
+sources/2 = SubResource("TileSetAtlasSource_mvrpy")

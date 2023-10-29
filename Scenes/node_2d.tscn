@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpvvj2iqux5x1"]
+
+[ext_resource type="Texture2D" uid="uid://cuemfpuqwru6a" path="res://Assets/Divination/zhanbu.png" id="2_l1tp4"]
+[ext_resource type="Texture2D" uid="uid://c745ncb34xjft" path="res://Assets/Divination/qianbif.png" id="3_oaxcq"]
+[ext_resource type="Texture2D" uid="uid://cg4smrpnhtock" path="res://Assets/Divination/qianbiz.png" id="4_vdj2h"]
+
+[sub_resource type="Animation" id="Animation_g1piv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Zhanbu:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.987856]
+}
+
+[sub_resource type="Animation" id="Animation_tus1c"]
+resource_name = "run"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Zhanbu:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.785398, 1.5708, 3.14159, 4.71239, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y4p30"]
+_data = {
+"RESET": SubResource("Animation_g1piv"),
+"run": SubResource("Animation_tus1c")
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(40, 56)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(378.74, 140.34)
+scale = Vector2(0.584375, 0.584375)
+
+[node name="Zhanbu" type="Sprite2D" parent="."]
+position = Vector2(176.74, -15.6599)
+rotation = -0.987856
+texture = ExtResource("2_l1tp4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "run"
+libraries = {
+"": SubResource("AnimationLibrary_y4p30")
+}
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(492.74, 140.34)
+scale = Vector2(0.786885, 0.802817)
+texture = ExtResource("3_oaxcq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(375.74, 143.34)
+scale = Vector2(0.836065, 0.816901)
+texture = ExtResource("4_vdj2h")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(260.74, 145.34)
+scale = Vector2(0.819672, 0.788732)
+texture = ExtResource("3_oaxcq")
