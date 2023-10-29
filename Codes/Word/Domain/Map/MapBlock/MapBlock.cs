@@ -5,14 +5,16 @@ namespace ShengChao.Codes.Word.Domain.Map.MapBlock;
 
 public class MapBlock
 {
-
     protected TileSetSource _tileSetSource;
 
     public bool isCollide { set; get; }
 
     public bool isCover { set; get; }
+
+    public bool isMonsterFarming { set; get; } = true;
     public int sourseId { get; set; }
 
+    public Vector2 localPostion { set; get; }
 
     public MapBlock(TileSetSource tileSetSource)
     {

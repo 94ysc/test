@@ -7,8 +7,8 @@ namespace ShengChao.Codes.Word.Domain.Map;
 public partial class Map : TileMap
 {
     public Vector2 cellSize { set; get; } = new Vector2(120, 140);
-    public int horCellNum { set; get; } = 100;
-    public int verCellNum { set; get; } = 100;
+    public int horCellNum { set; get; } = 50;
+    public int verCellNum { set; get; } = 50;
     public int _width { get; set; }
     public int _height { get; set; }
 
@@ -59,6 +59,7 @@ public partial class Map : TileMap
         {
             mapBlocks[vector2I] = mapBlock;
             SetCell(0, vector2I, mapBlock.sourseId, mapBlock.createRandomAtlas());
+            mapBlock.localPostion = MapToLocal(vector2I);
         }
     }
 }

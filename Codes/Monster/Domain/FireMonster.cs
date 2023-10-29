@@ -9,7 +9,7 @@ public partial  class FireMonster:BaseMonster
     {
         base._Ready();
         GetNode<Label>("Label").Text = "火";
-        GetNode<Label>("Label").LabelSettings.FontColor = Color.Color8(0, 0, 0, 255);
-        GetNode<Sprite2D>("Sprite2D").Modulate =Color.Color8(229, 96, 39, 255);
+        GetNode<Label>("Label").LabelSettings.FontColor =Color.Color8(248, 244, 237, 255);
+        GetNode<Sprite2D>("Sprite2D").Modulate =Color.Color8(252, 99, 21, 255);
     }
 }

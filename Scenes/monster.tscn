@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://cffxqn80dw31y" path="res://Assets/TTF/chongxi_seal.otf" id="3_sw66g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qp70w"]
+resource_local_to_scene = true
 line_spacing = 0.0
 font = ExtResource("3_sw66g")
 font_size = 25
@@ -31,9 +32,9 @@ scale = Vector2(0.303745, 0.291325)
 polygon = PackedVector2Array(-62, -38, -0.713672, -68.3641, 59.9482, -36.0527, 63.5165, 31.9713, 1.0705, 71.085, -62, 35)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -56.0
+offset_left = -57.0
 offset_top = -61.0
-offset_right = -31.0
+offset_right = -32.0
 offset_bottom = -35.0
 text = "火"
 label_settings = SubResource("LabelSettings_qp70w")

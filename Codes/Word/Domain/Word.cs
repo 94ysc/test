@@ -16,20 +16,21 @@ public partial class Word : Node2D
     {
         addMap();
         addPlayer();
-        // addMonster();
+        addMonster();
     }
 
     private void addMonster()
     {
         foreach (var keyValuePair in map.mapBlocks)
         {
-            if (keyValuePair.Value.isCollide)
+            if (!keyValuePair.Value.isCollide && keyValuePair.Value.isMonsterFarming)
             {
                 if (new Random().Next(1, 100) < 50)
                 {
                     MonsterServer monsterServer = new MonsterServer();
                     var monster = monsterServer.RandomMonster();
-                    monster.GlobalPosition = new Vector2(keyValuePair.Key.X*map.cellSize.X/2, keyValuePair.Key.Y*map.cellSize.Y/2);
+                    monster.GlobalPosition = keyValuePair.Value.localPostion + new Vector2I(35, 40);
+                    AddChild(monster);
                 }
             }
         }
@@ -37,10 +38,6 @@ public partial class Word : Node2D
 
     public override void _Process(double delta)
     {
-        // if (MonsterRepository._baseMonsters.Count > 0)
-        // {
-        //     AddChild(MonsterRepository._baseMonsters.Dequeue());
-        // }
     }
 
     private void addPlayer()

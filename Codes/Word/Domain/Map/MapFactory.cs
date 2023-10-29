@@ -16,8 +16,35 @@ public class MapFactory
     {
         Map map = new Map(_mapRepository.GetTileSet());
         setTopography(map);
-        setMountain(map);
+        // setMountain(map);
+        // setNotMountain(map);
+        setNotMonsterFarming(map);
         return map;
+    }
+
+    private void setNotMonsterFarming(Map map)
+    {
+        Rect2 rect2 = new Rect2(new Vector2(map.verCellNum / 2 - 8, map.horCellNum / 2 + 4), new Vector2(16, 8));
+        foreach (var keyValuePair in map.mapBlocks)
+        {
+            if (rect2.HasPoint(keyValuePair.Key))
+            {
+                keyValuePair.Value.isMonsterFarming = false;
+            }
+        }
+    }
+
+    private void setNotMountain(Map map)
+    {
+        Rect2 rect2 = new Rect2(new Vector2(map.verCellNum / 2 - 2, map.horCellNum / 2 + 2), new Vector2(4, 4));
+        foreach (var keyValuePair in map.mapBlocks)
+        {
+            if (rect2.HasPoint(keyValuePair.Key))
+            {
+                var graee = _mapRepository.create(MapRepository.MapBlockType.Grass);
+                map.addMapBlock(new Vector2I(map.horCellNum / 2, map.verCellNum / 2), graee);
+            }
+        }
     }
 
     public void setTopography(Map map)
