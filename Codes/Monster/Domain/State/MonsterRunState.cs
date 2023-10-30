@@ -14,7 +14,6 @@ public class MonsterRunState : PersonaState<BaseMonster>
 
     public override void EnterState()
     {
-        GD.Print("run");
     }
 
     public override void ExitState()

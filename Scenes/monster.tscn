@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3wn1j40ehivm"]
+[gd_scene load_steps=8 format=3 uid="uid://b3wn1j40ehivm"]
 
 [ext_resource type="Script" path="res://Codes/Monster/Domain/BaseMonster.cs" id="1_qqsa5"]
 [ext_resource type="Texture2D" uid="uid://dddii6pb3svh0" path="res://Assets/Creature/play.png" id="2_owv3v"]
 [ext_resource type="FontFile" uid="uid://cffxqn80dw31y" path="res://Assets/TTF/chongxi_seal.otf" id="3_sw66g"]
+[ext_resource type="Script" path="res://Codes/Monster/Domain/Event/MonsterHatredCheck.cs" id="4_5ckpc"]
+[ext_resource type="Script" path="res://Codes/Monster/Domain/Event/MonsterStrikingDistanceCheck.cs" id="5_i52qw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qp70w"]
 resource_local_to_scene = true
@@ -11,14 +13,14 @@ font = ExtResource("3_sw66g")
 font_size = 43
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fnc0e"]
-radius = 112.071
+radius = 215.058
 
-[node name="monster" type="CharacterBody2D"]
+[node name="monster" type="CharacterBody2D" groups=["monster"]]
 light_mask = 2
 visibility_layer = 2
 position = Vector2(44, 47)
 collision_layer = 4
-collision_mask = 7
+collision_mask = 3
 collision_priority = 100.0
 motion_mode = 1
 script = ExtResource("1_qqsa5")
@@ -44,7 +46,16 @@ text = "火"
 label_settings = SubResource("LabelSettings_qp70w")
 
 [node name="HatredCheck" type="Area2D" parent="."]
+script = ExtResource("4_5ckpc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HatredCheck"]
 position = Vector2(-45, -46)
 shape = SubResource("CircleShape2D_fnc0e")
+
+[node name="StrikingCheck" type="Area2D" parent="."]
+script = ExtResource("5_i52qw")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StrikingCheck"]
+position = Vector2(-44.37, -46.128)
+scale = Vector2(0.487984, 0.461638)
+polygon = PackedVector2Array(-62, -38, -0.713672, -68.3641, 59.9482, -36.0527, 60.1864, 37.1027, 1.0705, 71.085, -62, 35)

@@ -10,8 +10,8 @@ public class MonsterServer
 {
     private MonsterFactory _monsterFactory = new();
 
-    public BaseMonster RandomMonster()
+    public BaseMonster RandomMonster(Vector2 postion)
     {
-        return _monsterFactory.of((MonsterFactory.MonsterType)new Random().Next(0, 5));
+        return _monsterFactory.of((MonsterFactory.MonsterType)new Random().Next(0, 5),postion);
     }
 }

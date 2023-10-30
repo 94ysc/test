@@ -19,7 +19,6 @@ public partial class Player : Persona
 
     public override void _Ready()
     {
-        // GlobalPosition = new(GetViewportRect().Size.X/2, GetViewportRect().Size.Y / 2);
         Speed = 500;
         StateMachine = new();
         IdleState = new(this, StateMachine);

@@ -76,10 +76,11 @@ public class MonsterFactory
         });
     }
 
-    public BaseMonster of(MonsterType monsterType)
+    public BaseMonster of(MonsterType monsterType, Vector2 postion)
     {
         var baseMonster = _dictionary[monsterType].Invoke();
-        _monsterRepository.save(baseMonster);
+        baseMonster.SetInitPosition(postion);
+        _monsterRepository.Save(baseMonster);
         return baseMonster;
     }
 }

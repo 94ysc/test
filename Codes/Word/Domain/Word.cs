@@ -22,6 +22,7 @@ public partial class Word : Node2D
 
     private void addMonster()
     {
+        MonsterServer monsterServer = new MonsterServer();
         while (true)
         {
             foreach (var keyValuePair in map.mapBlocks)
@@ -30,11 +31,9 @@ public partial class Word : Node2D
                 {
                     if (new Random().Next(1, 100) < 50)
                     {
-                        MonsterServer monsterServer = new MonsterServer();
-                        var monster = monsterServer.RandomMonster();
-                        monster.SetInitPosition(keyValuePair.Value.localPostion + new Vector2I(35, 40));
+                        var monster = monsterServer.RandomMonster(keyValuePair.Value.localPostion + new Vector2I(35, 40));
                         AddChild(monster);
-                        if (MonsterRepository._baseMonsters.Count >= 1000)
+                        if (MonsterRepository.BaseMonsters.Count >= 1000)
                         {
                             return;
                         }
