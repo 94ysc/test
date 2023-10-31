@@ -42,6 +42,7 @@ public partial class BaseMonster : Persona
 
     public override void _Ready()
     {
+        init();
     }
 
     public void init()

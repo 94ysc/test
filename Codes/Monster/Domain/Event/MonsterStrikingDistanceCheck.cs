@@ -19,16 +19,14 @@ public partial class MonsterStrikingDistanceCheck:Area2D
             return;
         }
 
-        if (area2D.Name == "Beaten")
+        if (area2D.Name == "StrikingCheck")
         {
-            monster._targetPos = area2D.GlobalPosition;
-        }
-
-        if (!area2D.GetParent().IsInGroup("monster")) return;
-        if (area2D.GetParent() is not BaseMonster targetMonster) return;
-        if (monster.TargetPhase == targetMonster.Phase)
-        {
-            targetMonster.QueueFree();
+            if (!area2D.GetParent().IsInGroup("monster")) return;
+            if (area2D.GetParent() is not BaseMonster targetMonster) return;
+            if (monster.TargetPhase == targetMonster.Phase)
+            {
+                // targetMonster.QueueFree();
+            }
         }
     }
 }
