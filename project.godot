@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1704
-window/size/viewport_height=786
+window/size/viewport_width=852
+window/size/viewport_height=392
 window/size/window_width_override=852
 window/size/window_height_override=392
 window/stretch/mode="viewport"
@@ -60,3 +60,4 @@ RIGHT={
 [rendering]
 
 renderer/rendering_method="mobile"
+2d/snap/snap_2d_transforms_to_pixel=true
