@@ -23,6 +23,8 @@ script = ExtResource("1_g7owk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.827451, 0.419608, 0.47451, 1)
+position = Vector2(-2.5, 0.999999)
+scale = Vector2(2.01639, 1.97183)
 texture = ExtResource("2_d5tf4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -47,10 +49,10 @@ build_mode = 1
 polygon = PackedVector2Array(1, -71, 61, -35, 61, 35, -1, 72, -61, 36, -61, -36)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -29.0
-offset_top = -63.0
-offset_right = 31.0
-offset_bottom = 65.0
+offset_left = -31.0
+offset_top = -69.0
+offset_right = 29.0
+offset_bottom = 59.0
 text = "主
 角"
 label_settings = SubResource("LabelSettings_oxksr")

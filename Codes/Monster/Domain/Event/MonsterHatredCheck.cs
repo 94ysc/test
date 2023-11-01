@@ -8,26 +8,23 @@ namespace ShengChao.Codes.Domain.checks;
 /// </summary>
 public partial class MonsterHatredCheck : Area2D
 {
+    private bool _flag;
+
     public override void _Ready()
     {
-        var timer = GetChild<Timer>(1);
-        timer.Timeout += HateAttracts;
-        timer.Start();
+        AreaEntered += Statr;
+        AreaExited += End;
     }
 
-    // private void NotHateAttracts(Area2D area2D)
-    // {
-    //     if (GetParent() is not BaseMonster monster)
-    //     {
-    //         return;
-    //     }
-    //
-    //     if (area2D.Name != "Beaten" && area2D.GetParent() is not BaseMonster)
-    //     {
-    //         monster?.StateMachine.ChangeState(monster.IdleState);
-    //     }
-    // }
+    public void Statr(Area2D area2D)
+    {
+        _flag = true;
+    }
 
+    public void End(Area2D area2D)
+    {
+        _flag = false;
+    }
 
     public void HateAttracts()
     {
@@ -52,11 +49,20 @@ public partial class MonsterHatredCheck : Area2D
                 monster._targetPos = area2D.GlobalPosition;
                 monster.StateMachine.ChangeState(monster.RunState);
             }
+
             if (monster.HostilePhase[0] != targetMonster.Phase &&
                 monster.HostilePhase[1] != targetMonster.Phase) continue;
             monster._targetPos = monster.GlobalPosition +
                                  (monster.GlobalPosition - targetMonster.GlobalPosition).Normalized() * 100;
             monster.StateMachine.ChangeState(monster.RunState);
+        }
+    }
+
+    public override void _Process(double delta)
+    {
+        if (_flag)
+        {
+            HateAttracts();
         }
     }
 }

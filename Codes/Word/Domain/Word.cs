@@ -4,7 +4,6 @@ using Godot;
 using ShengChao.Codes.Monster.ACL.Client.Repository;
 using ShengChao.Codes.Monster.Domain;
 using ShengChao.Codes.Player.Domain;
-using ShengChao.Codes.Word.ACL.Adapter.Repository;
 using ShengChao.Codes.Word.Domain.Map;
 
 namespace ShengChao.Codes.Word.Domain;
@@ -25,19 +24,15 @@ public partial class Word : Node2D
         MonsterServer monsterServer = new MonsterServer();
         while (true)
         {
-            foreach (var keyValuePair in map.mapBlocks)
+            foreach (var monster in from keyValuePair in 
+                         map.mapBlocks 
+                     where !keyValuePair.Value.isCollide && keyValuePair.Value.isMonsterFarming 
+                     where new Random().Next(1, 100) < 50 select monsterServer.RandomMonster(keyValuePair.Value.localPostion + new Vector2I(35, 40)))
             {
-                if (!keyValuePair.Value.isCollide && keyValuePair.Value.isMonsterFarming)
+                AddChild(monster);
+                if (MonsterRepository.BaseMonsters.Count >= 100)
                 {
-                    if (new Random().Next(1, 100) < 50)
-                    {
-                        var monster = monsterServer.RandomMonster(keyValuePair.Value.localPostion + new Vector2I(35, 40));
-                        AddChild(monster);
-                        if (MonsterRepository.BaseMonsters.Count >= 1000)
-                        {
-                            return;
-                        }
-                    }
+                    return;
                 }
             }
         }
